@@ -4,6 +4,7 @@
   "description": "Uber Clone Server-Side",
   "main": "index.js",
   "scripts": {
+    "predev": "npm run types",
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql",
     "pretypes": "gql-merge --out-file ./src/schema.graphql ./src/api/**/*.graphql",
@@ -20,7 +21,6 @@
   },
   "homepage": "https://github.com/PetrovIlyuha/UberCloneServer#readme",
   "devDependencies": {
-    "@types/bcrypt": "^3.0.0",
     "@types/cors": "^2.8.6",
     "@types/helmet": "^0.0.45",
     "@types/morgan": "^1.7.37",
@@ -34,6 +34,8 @@
     "typescript": "^3.7.2"
   },
   "dependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "bcrypt": "^3.0.6",
     "class-validator": "^0.11.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
